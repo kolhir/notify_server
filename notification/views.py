@@ -9,7 +9,6 @@ from notification.serializers import NotificationSerializer
 
 class NotificationViewSet(viewsets.ModelViewSet):
     serializer_class = NotificationSerializer
-    queryset = Notification.objects.filter()
     permission_classes = [IsAuthenticated]
     search_fields = ['title']
     filter_backends = [rest_framework.DjangoFilterBackend, filters.SearchFilter]
