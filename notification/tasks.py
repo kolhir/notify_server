@@ -12,7 +12,7 @@ def send_notifications(notify_id):
     notification = Notification.objects.get(id=notify_id)
     send_mail(
         notification.title,
-        notification.description,
+        f"Остался час до события:\n{notification.title}\n{notification.description}\n"
         'notify_email@gmail.com',
         [notification.owner.email, ],
         fail_silently=False,

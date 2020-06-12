@@ -150,6 +150,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
+
 STATIC_URL = '/static/'
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
@@ -165,4 +167,12 @@ CELERYBEAT_SCHEDULE = {
    },
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gmail email'
+EMAIL_HOST_PASSWORD = 'gmail password'
+DEFAULT_FROM_EMAIL = ''
+DEFAULT_TO_EMAIL = ''
