@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_auth.registration',
     'notification',
     'django_filters',
+    'reviews'
 ]
 
 SITE_ID = 1
@@ -172,7 +173,7 @@ CELERYBEAT_SCHEDULE = {
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gmail email'
-EMAIL_HOST_PASSWORD = 'gmail password'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = ''
 DEFAULT_TO_EMAIL = ''
